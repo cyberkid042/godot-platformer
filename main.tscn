@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://csiutv3i12s1a"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_58ioe"]
+[ext_resource type="PackedScene" uid="uid://cgn4v77ije5sv" path="res://BG.tscn" id="2_nkhpx"]
+
+[sub_resource type="GDScript" id="GDScript_aigxf"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	Utils.loadGame()
+	text = \"Play\"
+	if Game.playerHP > 0:
+		text = \"Resume\"
+"
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_58ioe")
+
+[node name="Play" type="Button" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 808.0
+offset_top = 439.0
+offset_right = 1134.0
+offset_bottom = 559.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_aigxf")
+
+[node name="Quit" type="Button" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 807.0
+offset_top = 640.0
+offset_right = 1133.0
+offset_bottom = 762.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[node name="BG" parent="." instance=ExtResource("2_nkhpx")]
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit"]

@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgn4v77ije5sv"]
+
+[ext_resource type="Texture2D" uid="uid://ccvmigsrhia3q" path="res://sunny-land/assets/environment/back.png" id="1_chik7"]
+[ext_resource type="Script" path="res://BG.gd" id="1_qmxq6"]
+[ext_resource type="Texture2D" uid="uid://banun0bompf2l" path="res://sunny-land/assets/environment/middle.png" id="3_pvetl"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_qmxq6")
+metadata/_edit_horizontal_guides_ = [-1750.0]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(3000, 2.08165e-12)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(1519, 695)
+scale = Vector2(7.81511, 5.72083)
+texture = ExtResource("1_chik7")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(5960, 2.08165e-12)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(300, 1015)
+scale = Vector2(3.65909, 2.35598)
+texture = ExtResource("3_pvetl")
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(930, 1020.5)
+scale = Vector2(3.65909, 2.35598)
+texture = ExtResource("3_pvetl")
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1573, 1007.5)
+scale = Vector2(3.65909, 2.35598)
+texture = ExtResource("3_pvetl")
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(2198, 1005.5)
+scale = Vector2(3.65909, 2.35598)
+texture = ExtResource("3_pvetl")
+
+[node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(2833, 1018.5)
+scale = Vector2(3.65909, 2.35598)
+texture = ExtResource("3_pvetl")
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(3421, 996)
+scale = Vector2(3.65909, 2.35598)
+texture = ExtResource("3_pvetl")
+
+[node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(4051, 1001.5)
+scale = Vector2(3.65909, 2.35598)
+texture = ExtResource("3_pvetl")
+
+[node name="Middle8" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(4694, 988.5)
+scale = Vector2(3.65909, 2.35598)
+texture = ExtResource("3_pvetl")
+
+[node name="Middle9" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(5319, 986.5)
+scale = Vector2(3.65909, 2.35598)
+texture = ExtResource("3_pvetl")
+
+[node name="Middle10" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(5802, 999.5)
+scale = Vector2(1.93182, 2.35598)
+texture = ExtResource("3_pvetl")
